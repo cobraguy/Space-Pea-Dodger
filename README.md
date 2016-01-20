@@ -5,6 +5,8 @@ A recreation of my [Space Pea Dodger game](https://scratch.mit.edu/projects/1005
 
 The game is playable on desktop. It should be playable on mobile browsers, however, I have only tested it on my Nexus 7 2013.
 The only difference between desktop and mobile is that on desktop, if your mouse leaves the game, it's game over. On mobile you can lift your finger, but it doesn't save you from losing.
+
+The game probably doesn't look all that great when scaled up or down or whatever, but hey, it's not a fancy game.
 ___
 
 There are still a couple things I want to do.
