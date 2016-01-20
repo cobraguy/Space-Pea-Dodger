@@ -1,5 +1,6 @@
 # Space-Pea-Dodger
 A recreation of my [Space Pea Dodger game](https://scratch.mit.edu/projects/10054599/) in [Phaser](http://phaser.io/).
+
 [Abra](https://aurifexlabs.com/) was used to develop and test the game.
 
 The game is playable on desktop. It should be playable on mobile browsers, however, I have only tested it on my Nexus 7 2013.
