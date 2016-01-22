@@ -66,16 +66,16 @@ var playState = {
                 this.stopMoving(pea);
                 score++;
                 this.scoreLabel.text = score;
-                if(pea.body.x < 0){
-                    pea.body.x = 0;
-                }else if(pea.body.x > 480){ 
-                    pea.body.x = 448;
+                if(pea.x < 0){
+                    pea.x = 21;
+                }else if(pea.x > 480){ 
+                    pea.x = 459;
                 }
                 
-                if(pea.body.y < 0){
-                    pea.body.y = 0;
+                if(pea.y < 0){
+                    pea.y = 21;
                 }else if(pea.y > 360){
-                    pea.body.y = 328;
+                    pea.y = 339;
                 }
                 this.setAttackTime(pea);
             }
