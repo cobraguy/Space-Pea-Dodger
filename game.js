@@ -16,7 +16,6 @@ var loadState = {
         loadingLabel.align = "center";
         loadingLabel.anchor.setTo(0.5);
         game.load.image("pea", "pea.png");
-        game.load.image("player", "player-point.png");
         game.load.spritesheet("button", "button.png", 200, 75);
     },
     
@@ -44,9 +43,6 @@ var playState = {
         this.scoreLabel.align = "center";
         this.scoreLabel.anchor.setTo(0.5);
 
-        this.player = game.add.sprite(0, 0, "player");
-        game.physics.arcade.enable(this.player);
-
         this.peas = game.add.physicsGroup();
         
         this.createPea(2);
@@ -54,11 +50,11 @@ var playState = {
     
     update: function(){
         if(!game.input.activePointer.withinGame) game.state.start("gameover");
-        this.player.x = game.input.x;
-        this.player.y = game.input.y;
-        game.physics.arcade.overlap(this.player, this.peas, this.onHit, null, this);
+		
         for(var i = 0; i < this.peas.children.length; i++){
             var pea = this.peas.children[i];
+			
+			if(pea.body.hitTest(game.input.x, game.input.y)) game.state.start("gameover");
             if(!pea.inMotion) pea.rotation = game.physics.arcade.angleToPointer(pea);
             
             if(game.time.now > pea.attackTime && !pea.inMotion){
@@ -89,10 +85,6 @@ var playState = {
             this.target += game.rnd.integerInRange(5, 10);
             this.createPea();
         }
-    },
-    
-    onHit: function(){
-        game.state.start("gameover");
     },
     
     createPea: function(amount){
