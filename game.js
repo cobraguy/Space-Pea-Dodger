@@ -47,7 +47,7 @@ var playState = {
         this.player = game.add.sprite(0, 0, "player");
         game.physics.arcade.enable(this.player);
 
-        this.peas = game.add.group();
+        this.peas = game.add.physicsGroup();
         
         this.createPea(2);
     },
@@ -102,7 +102,6 @@ var playState = {
             this.setRandPos(pea);
             pea.anchor.setTo(0.5);
             pea.inMotion = false;
-            game.physics.arcade.enable(pea);
             this.setAttackTime(pea);
         }
     },
