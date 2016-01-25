@@ -132,6 +132,13 @@ var gameoverState = {
         this.endLabel = game.add.text(game.world.centerX, game.world.centerY, score, {fill: "#ffffff"});
         this.endLabel.align = "center";
         this.endLabel.anchor.setTo(0.5);
+        
+        this.button = game.add.button(game.world.centerX, game.world.centerY + 80, "button", this.buttonClicked, this, 1, 0);
+        this.button.anchor.setTo(0.5);
+    },
+    
+    buttonClicked: function(){
+    	game.state.start("play");
     }
 };
 
