@@ -3,9 +3,9 @@ var bootState = {
     create: function(){
         game.stage.backgroundColor = "#0c00ff";
         game.physics.startSystem(Phaser.Physics.ARCADE);
-		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		game.scale.pageAlignHorizontally = true;
-		game.scale.pageAlignVertically = true;
+	game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+	game.scale.pageAlignHorizontally = true;
+	game.scale.pageAlignVertically = true;
         game.state.start("load");
     }
 };
@@ -53,8 +53,8 @@ var playState = {
 		
         for(var i = 0; i < this.peas.children.length; i++){
             var pea = this.peas.children[i];
-			
-			if(pea.body.hitTest(game.input.x, game.input.y)) game.state.start("gameover");
+	    
+	    if(pea.body.hitTest(game.input.x, game.input.y)) game.state.start("gameover");
             if(!pea.inMotion) pea.rotation = game.physics.arcade.angleToPointer(pea);
             
             if(game.time.now > pea.attackTime && !pea.inMotion){
