@@ -11,6 +11,8 @@ ___
 
 There are still a couple things I want to do.
 
-~1. Add instructions and a game over message (Simply, "Game Over", if they lost, and another message if the mouse left the game)~ Didn't add a different message for the mouse leaving the screen because I'm lazy. :P
-~2. Add a button to play again instead of having to refresh the page~
-3. **Clean up the code and add comments**
+~~Add instructions and a game over message (Simply, "Game Over", if they lost, and another message if the mouse left the game)~~ Added game over, but not instructions, or a separate message for the mouse leaving the screen because I'm lazy.
+
+~~Add a button to play again instead of having to refresh the page~~
+
+**Clean up the code and add comments**
